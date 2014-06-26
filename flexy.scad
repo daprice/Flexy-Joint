@@ -23,7 +23,7 @@ flexy_small_num = 11;
 custom_num = 0;
 
 // Label for this mold
-label = "Experimental Dragonskin Elastic Joints v1";
+label = "Dragonskin Elastic Joints v2 (shorter)";
 
 /* [Custom Sizes] */
 
@@ -41,15 +41,15 @@ custom_length = 13;
 
 /* [Hidden] */
 
-flexy_large_dia = 6.9;
-flexy_large_thick = 4.1;
+flexy_large_dia = 6.85;
+flexy_large_thick = 4;
 flexy_large_width = 16;
-flexy_large_length = 15;
+flexy_large_length = 13.7;
 
-flexy_small_dia = 5;
+flexy_small_dia = 5.1;
 flexy_small_thick = 2.2;
 flexy_small_width = 12;
-flexy_small_length = 13;
+flexy_small_length = 12;
 
 text_line_height = 4;
 
