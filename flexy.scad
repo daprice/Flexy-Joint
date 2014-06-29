@@ -23,28 +23,28 @@ flexy_small_num = 11;
 custom_num = 0;
 
 // Label for this mold
-label = "Experimental Dragonskin Elastic Joints v1";
+label = "Flexy Beast Joints v1";
 
 /* [Custom Sizes] */
 
 // Diameter of end cylinders
-custom_dia = 5;
+custom_dia = 0;
 
 // Thickness of joint middle
-custom_thick = 2.2;
+custom_thick = 0;
 
 // Width of joint
-custom_width = 12;
+custom_width = 0;
 
 // Overall length of joint
-custom_length = 13;
+custom_length = 0;
 
 /* [Hidden] */
 
-flexy_large_dia = 6.9;
+flexy_large_dia = 7.5;
 flexy_large_thick = 4.1;
 flexy_large_width = 16;
-flexy_large_length = 15;
+flexy_large_length = 15.5;
 
 flexy_small_dia = 5;
 flexy_small_thick = 2.2;
