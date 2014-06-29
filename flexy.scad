@@ -14,10 +14,10 @@ depth = 1; // [1:20]
 padding = 3;
 
 // How many Flexy Hand Large joints?
-flexy_large_num = 4;
+flexy_large_num = 5;
 
 // How many Flexy Hand Small joints?
-flexy_small_num = 11;
+flexy_small_num = 9;
 
 // How many custom sized joints?
 custom_num = 0;
