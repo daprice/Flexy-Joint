@@ -41,15 +41,17 @@ custom_length = 0;
 
 /* [Hidden] */
 
-flexy_large_dia = 7.5;
-flexy_large_thick = 4.1;
-flexy_large_width = 16;
-flexy_large_length = 15.5;
+flexy_large_dia    = 6.85;
+flexy_large_thick  = 4.1;
+flexy_large_width  = 9.5;
+flexy_large_length = 13.7;
+flexy_large_offset = 0.75;
 
-flexy_small_dia = 5;
-flexy_small_thick = 2.2;
-flexy_small_width = 12;
-flexy_small_length = 13;
+flexy_small_dia    = 6.85;
+flexy_small_thick  = 4.1;
+flexy_small_width  = 9.5;
+flexy_small_length = 13.7;
+flexy_small_offset = 0;
 
 text_line_height = 4;
 
@@ -72,22 +74,22 @@ custom_text = str("d=",custom_dia,",t=",custom_thick,",w=",custom_width,",l=",cu
 mould_joint_width = depth * max(flexy_large_width, flexy_small_width, custom_width);
 
 
-module flexy_joint(dia, thick, width, length) {
+module flexy_joint(dia, thick, width, length, offset=0) {
 	translate([dia/2, -dia/2, 0]) {
 		cylinder(d=dia, h=width, center=false);
-		translate([0, -thick/2, 0])
+		translate([0, -thick/2 - offset, 0])
 			cube([length - dia, thick, width]);
 		translate([length - dia, 0, 0])
 			cylinder(d=dia, h=width, center=false);
 	}
 }
 
-module flexy_large_joint(dia=flexy_large_dia, thick=flexy_large_thick, width=flexy_large_width, length=flexy_large_length) {
-	flexy_joint(dia, thick, width, length);
+module flexy_large_joint(dia=flexy_large_dia, thick=flexy_large_thick, width=flexy_large_width, length=flexy_large_length, offset=flexy_large_offset) {
+	flexy_joint(dia, thick, width, length, offset);
 }
 
-module flexy_small_joint(dia=flexy_small_dia, thick=flexy_small_thick, width=flexy_small_width, length=flexy_small_length) {
-	flexy_joint(dia, thick, width, length);
+module flexy_small_joint(dia=flexy_small_dia, thick=flexy_small_thick, width=flexy_small_width, length=flexy_small_length, offset=flexy_small_offset) {
+	flexy_joint(dia, thick, width, length, offset);
 }
 
 module mould() {
@@ -110,7 +112,7 @@ module joint_array(depth = 1, mould = 0) {
 		//text label
 		if (flexy_large_num > 0) {
 			translate([0,-5,mould_y])
-			write("Flexy Large", h=text_line_height, t=-1.8);
+			write("MCP", h=text_line_height, t=-1.8);
 		}
 		//make flexy small joints
 		translate([flexy_large_total_w, 0, 0]) {
@@ -123,7 +125,7 @@ module joint_array(depth = 1, mould = 0) {
 			}
 			if (flexy_small_num > 0) {
 				translate([0,-5,mould_y])
-					write("Flexy Small", h=text_line_height, t=-1.8);
+					write("Phalangeal", h=text_line_height, t=-1.8);
 			}
 		}
 		//make custom joints
