@@ -43,13 +43,13 @@ custom_length = 0;
 
 flexy_large_dia    = 6.85;
 flexy_large_thick  = 4.1;
-flexy_large_width  = 9.5;
+flexy_large_width  = 15;
 flexy_large_length = 13.7;
 flexy_large_offset = 0.75;
 
 flexy_small_dia    = 6.85;
 flexy_small_thick  = 4.1;
-flexy_small_width  = 9.5;
+flexy_small_width  = 15;
 flexy_small_length = 13.7;
 flexy_small_offset = 0;
 
