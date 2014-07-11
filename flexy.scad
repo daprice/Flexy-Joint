@@ -23,7 +23,7 @@ flexy_small_num = 9;
 custom_num = 0;
 
 // Label for this mold
-label = "Flexy Beast Joints v1";
+label = "Experimental Simpact Joints v1";
 
 /* [Custom Sizes] */
 
@@ -44,13 +44,13 @@ custom_length = 0;
 flexy_large_dia    = 6.85;
 flexy_large_thick  = 4.1;
 flexy_large_width  = 15;
-flexy_large_length = 13.7;
-flexy_large_offset = 0.75;
+flexy_large_length = 17;
+flexy_large_offset = 0;
 
-flexy_small_dia    = 6.85;
-flexy_small_thick  = 4.1;
+flexy_small_dia    = 4.85;
+flexy_small_thick  = 2.1;
 flexy_small_width  = 15;
-flexy_small_length = 13.7;
+flexy_small_length = 14.7;
 flexy_small_offset = 0;
 
 text_line_height = 4;
