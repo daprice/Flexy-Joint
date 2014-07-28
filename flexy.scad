@@ -110,7 +110,7 @@ module joint_array(depth = 1, mould = 0) {
 				}
 		}
 		//text label
-		if (flexy_large_num > 0) {
+		if (flexy_large_num > 0 && mould == 1) {
 			translate([0,-5,mould_y])
 			write("MCP", h=text_line_height, t=-1.8);
 		}
@@ -123,7 +123,7 @@ module joint_array(depth = 1, mould = 0) {
 						if (mould == 1) flexy_small_joint(width=mould_joint_width);
 					}
 			}
-			if (flexy_small_num > 0) {
+			if (flexy_small_num > 0 && mould == 1) {
 				translate([0,-5,mould_y])
 					write("Phalangeal", h=text_line_height, t=-1.8);
 			}
@@ -137,7 +137,7 @@ module joint_array(depth = 1, mould = 0) {
 						if (mould == 1) flexy_joint(dia=custom_dia, thick=custom_thick, width=mould_joint_width, length=custom_length);
 					}
 			}
-			if (custom_num > 0) {
+			if (custom_num > 0 && mould == 1) {
 				translate([0,-5,mould_y]) {
 					write(custom_text, h=text_line_height, t=-1.8);
 				}
@@ -146,7 +146,7 @@ module joint_array(depth = 1, mould = 0) {
 	}
 }
 
-if ( negative == false ) {
+if ( negative == 0 ) {
 	joint_array(depth=depth, mould=0);
 }
 else {
